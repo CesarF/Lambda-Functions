@@ -1,0 +1,31 @@
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:DeleteItem",
+                "dynamodb:GetItem",
+                "dynamodb:PutItem",
+                "dynamodb:Scan",
+                "dynamodb:UpdateItem"
+            ],
+            "Resource": "arn:aws:dynamodb:region:accountId:table/*"
+        },
+      {
+         "Effect":"Allow",
+         "Action":"lambda:InvokeFunction",
+         "Resource":"arn:aws:lambda:region:accountId:function:functionName*"
+      },
+      {
+         "Effect":"Allow",
+         "Action":[
+            "dynamodb:DescribeStream",
+            "dynamodb:GetRecords",
+            "dynamodb:GetShardIterator",
+            "dynamodb:ListStreams"
+         ],
+         "Resource":"arn:aws:dynamodb:region:accountId:table/tableName/stream/*"
+      }
+   ]
+}   

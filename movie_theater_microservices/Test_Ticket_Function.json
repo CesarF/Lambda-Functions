@@ -1,0 +1,9 @@
+
+{
+  "httpMethod": "POST",
+  "body": "{\"movie\": \"Batman\",\"quantity\": 3,\"cost\": 1000}"
+}
+
+{
+  "httpMethod": "GET"
+}
